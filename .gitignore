@@ -1,0 +1,22 @@
+# Runtime state — never version
+backups/
+cache/
+file-history/
+paste-cache/
+projects/
+session-env/
+sessions/
+shell-snapshots/
+tasks/
+history.jsonl
+stats-cache.json
+.last-cleanup
+.last-update-result.json
+
+# Local-only overrides
+settings.local.json
+
+# Plugin install dir (registry is versioned; installed marketplaces are not)
+plugins/marketplaces/
+
+.DS_Store
