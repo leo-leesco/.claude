@@ -16,7 +16,7 @@ stats-cache.json
 # Local-only overrides
 settings.local.json
 
-# Plugin install dir (registry is versioned; installed marketplaces are not)
-plugins/marketplaces/
+# Plugin state (rewritten on every session — timestamp churn)
+plugins/
 
 .DS_Store

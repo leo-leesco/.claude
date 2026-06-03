@@ -9,9 +9,8 @@ Tracked here:
   - `branch-guard.sh` — auto-checkout a `claude/<slug>` branch on edits to `main`/`master`/`develop`/`trunk`
   - `notify.sh` — macOS notification on agent prompts/questions, with tmux pane jump on click
   - `jump-to-tmux.sh` — click handler used by `notify.sh`
-- `plugins/known_marketplaces.json` — plugin marketplace registry
 
-Everything else under `~/.claude/` is runtime state (history, sessions, file-history, project memory) and is excluded via `.gitignore`.
+Everything else under `~/.claude/` is runtime state (history, sessions, file-history, project memory, plugin registry) and is excluded via `.gitignore`.
 
 ## Use as a submodule
 
