@@ -3,10 +3,7 @@
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "AWS_REGION": "us-east-2"
   },
-  "theme": "auto",
-  "model": "us.anthropic.claude-opus-4-7[1m]",
   "permissions": {
-    "defaultMode": "default",
     "allow": [
       "Read",
       "Glob",
@@ -153,8 +150,13 @@
       "Bash(gh release*)",
       "Bash(gh repo create*)",
       "Bash(gh repo delete*)"
-    ]
+    ],
+    "defaultMode": "default"
   },
+  "model": "global.anthropic.claude-opus-4-8[1m]",
+  "effortLevel": "xhigh",
+  "enableWorkflows": true,
+  "ultracode": true,
   "hooks": {
     "PreToolUse": [
       {
@@ -163,6 +165,16 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/branch-guard.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__ide__openDiff",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -n \"$NVIM_TMUX_PANE\" ] && tmux select-pane -t \"$NVIM_TMUX_PANE\"; exit 0",
+            "async": true
           }
         ]
       }
@@ -178,5 +190,7 @@
         ]
       }
     ]
-  }
+  },
+  "skipWorkflowUsageWarning": true,
+  "theme": "auto"
 }
